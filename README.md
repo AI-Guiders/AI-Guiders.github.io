@@ -1,3 +1,4 @@
+# Site source is in `docs/` (GitHub Pages). Open https://ai-guiders.github.io/ — not this README.
 # AI-Guiders.github.io
 
 Organization site (GitHub Pages): **Settings → Pages → branch `main`, folder `/docs`**.
@@ -23,3 +24,4 @@ Landings are hand-maintained for now. Regenerate from `tools/gen_pages.py` if yo
 ## Future (optional)
 
 - Port `build-writing.csx` from [KarataevDmitry.github.io](https://github.com/KarataevDmitry/KarataevDmitry.github.io) for org essays under `src/writing/{en,ru}`.
+
