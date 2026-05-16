@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Тексты — AI-Guiders</title>
+  <link href="https://ai-guiders.github.io/ru/writing/" rel="alternate" type="text/html" />
+  <link href="https://ai-guiders.github.io/ru/writing/atom.xml" rel="self" type="application/atom+xml" />
+  <id>https://ai-guiders.github.io/ru/writing/atom.xml</id>
+  <updated>2026-04-02T12:00:00Z</updated>
+  <author><name>AI-Guiders</name></author>
+  <entry>
+    <title>Тексты на AI-Guiders</title>
+    <link href="https://ai-guiders.github.io/ru/writing/welcome-writing.html" rel="alternate" type="text/html" />
+    <id>https://ai-guiders.github.io/ru/writing/welcome-writing.html</id>
+    <updated>2026-04-02T12:00:00Z</updated>
+    <summary type="text">Орг-эссе и заметки к релизам — здесь; личный блог остаётся на сайте автора.</summary>
+  </entry>
+</feed>

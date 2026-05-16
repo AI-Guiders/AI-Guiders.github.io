@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Writing on AI-Guiders — AI-Guiders</title>
+  <meta name="description" content="Org essays and release notes live here; deeper personal posts stay on the author site." />
+  <link rel="alternate" hreflang="en" href="/writing/welcome-writing.html" />
+  <link rel="alternate" hreflang="ru" href="/ru/writing/welcome-writing.html" />
+  <link rel="alternate" hreflang="x-default" href="/writing/welcome-writing.html" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F916;</text></svg>" />
+  <link rel="stylesheet" href="/assets/css/articles.css" />
+  <link rel="alternate" type="application/atom+xml" title="Writing (Atom)" href="/writing/atom.xml" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <div class="logo"><a href="/">AI<span>-</span>Guiders</a></div>
+      <div class="nav-right">
+        <ul>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#stack">Open stack</a></li>
+          <li><a href="/writing/" aria-current="page">Writing</a></li>
+          <li><a href="https://github.com/AI-Guiders/handbook/wiki">Handbook</a></li>
+          <li><a href="https://github.com/AI-Guiders">GitHub</a></li>
+        </ul>
+        <ul class="nav-lang" aria-label="Language">
+          <li><a href="/writing/welcome-writing.html" lang="en" aria-current="page">EN</a></li>
+          <li class="nav-sep" aria-hidden="true">|</li>
+          <li><a href="/ru/writing/welcome-writing.html" lang="ru">RU</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main" class="container">
+    <article class="article-wrap">
+      <p class="article-back"><a href="/writing/">&larr; All writing</a> · <a href="/writing/tags.html">All tags</a> · <a href="/writing/atom.xml">Atom feed</a></p>
+
+      <header class="article-header">
+        <h1>Writing on AI-Guiders</h1>
+        <p class="article-meta">May 2026</p>
+        <p class="article-tags" aria-label="tags">
+          <a class="tag-pill" href="/writing/tag/agents.html">agents</a>
+          <a class="tag-pill" href="/writing/tag/meta.html">meta</a>
+        </p>
+      </header>
+
+      <div class="prose">
+        <p>This section is the <strong>org writing surface</strong> for AI-Guiders: product direction, open-stack notes, and material that belongs next to the repositories — not only in READMEs or ADRs.</p>
+        <h2 id="what-goes-here">What goes here</h2>
+        <ul>
+        <li><strong>Org voice</strong> — parity, observable loops, MCP and IDE decisions we want to cite from the handbook or GitHub.</li>
+        <li><strong>Pointers</strong> — when a topic is personal or experimental, we link out instead of duplicating.</li>
+        </ul>
+        <p>Long-form essays and the full archive remain on <a href="https://karataevdmitry.github.io/writing/">Dmitry Karataev's site</a> (EN) and <a href="https://karataevdmitry.github.io/ru/writing/">RU</a>. Example cross-post: <a href="https://karataevdmitry.github.io/writing/agent-notes-mcp-2-one-config.html">Agent Notes MCP 2.0</a>.</p>
+        <h2 id="how-to-publish">How to publish</h2>
+        <p>Add paired <code>src/writing/en/*.md</code> and <code>src/writing/ru/*.md</code>, then run <code>dotnet script tools/build-writing.csx</code> from the repo root. See <code>src/writing/README.md</code>.</p>
+
+      </div>
+    </article>
+  </main>
+
+  <footer id="contact">
+    <div class="container">
+      <div class="contact-links">
+        <a href="https://t.me/Krawler">Telegram</a>
+        <a href="https://github.com/AI-Guiders">GitHub</a>
+      </div>
+      <p>AI-Guiders &copy; 2026.</p>
+    </div>
+  </footer>
+</body>
+</html>

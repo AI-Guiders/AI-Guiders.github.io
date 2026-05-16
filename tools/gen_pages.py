@@ -140,14 +140,14 @@ def page(lang, title, desc, nav_items, hero_label, h1, h1_accent, lead, about_ti
     return html.replace("motion", "div")
 
 
-root = Path(__file__).parent / "docs"
+root = Path(__file__).resolve().parent.parent / "docs"
 (root / "ru").mkdir(parents=True, exist_ok=True)
 
 en = page(
     "en",
     "AI-Guiders — Agent-first open stack for .NET",
     "Open tools for agent-first .NET work: Cascade IDE, MCP servers, shared libraries.",
-    [("#about", "About"), ("#stack", "Open stack"), ("#handbook", "Handbook"), (ORG, "GitHub")],
+    [("#about", "About"), ("#stack", "Open stack"), ("/writing/", "Writing"), ("#handbook", "Handbook"), (ORG, "GitHub")],
     "Open source · .NET · MCP",
     "Agent-first tools",
     "you can verify",
@@ -156,7 +156,8 @@ en = page(
     "What we do",
     "<strong>Parity</strong> — if an agent can do it via MCP, the IDE should not contradict it. "
     "<strong>Observable loop</strong> — one legible contour for editor, tools, and agent. "
-    "Essays on <a href=\"https://karataevdmitry.github.io/\">Dmitry Karataev's site</a>; this is the org hub.",
+    "Org essays in <a href=\"/writing/\">Writing</a>; longer personal archive on "
+    "<a href=\"https://karataevdmitry.github.io/writing/\">Dmitry Karataev's site</a>.",
     "Open stack",
     f"Full list: <a href=\"{ORG}\">github.com/AI-Guiders</a>",
     "Handbook & KB",
@@ -166,7 +167,7 @@ en = page(
         (f"{ORG}/kb-public", "kb-public", "Public KB for agents"),
         (f"{ORG}/handbook", "handbook repo", "Edit wiki/ folder, sync to GitHub Wiki"),
     ],
-    [(ORG, "GitHub"), ("https://karataevdmitry.github.io/", "Writing (personal)")],
+    [(ORG, "GitHub"), ("/writing/", "Writing"), ("https://karataevdmitry.github.io/writing/", "Personal archive")],
     CSS,
     "/",
 )
@@ -174,7 +175,7 @@ ru = page(
     "ru",
     "AI-Guiders — open stack для agent-first .NET",
     "Открытые инструменты для agent-first .NET: Cascade IDE, MCP, общие библиотеки.",
-    [("#about", "О нас"), ("#stack", "Open stack"), ("#handbook", "Handbook"), (ORG, "GitHub")],
+    [("#about", "О нас"), ("#stack", "Open stack"), ("/ru/writing/", "Тексты"), ("#handbook", "Handbook"), (ORG, "GitHub")],
     "Open source · .NET · MCP",
     "Инструменты для агентов",
     "которым можно доверять",
@@ -183,7 +184,8 @@ ru = page(
     "Что делаем",
     "<strong>Паритет</strong> — если агент делает через MCP, IDE не должна противоречить. "
     "<strong>Наблюдаемый контур</strong> — редактор, инструменты и агент в одной картине. "
-    "Тексты — на <a href=\"https://karataevdmitry.github.io/ru/\">сайте Дмитрия Каратаева</a>; здесь — хаб организации.",
+    "Орг-тексты — в разделе <a href=\"/ru/writing/\">Тексты</a>; личный архив — на "
+    "<a href=\"https://karataevdmitry.github.io/ru/writing/\">сайте Дмитрия Каратаева</a>.",
     "Open stack",
     f"Полный список: <a href=\"{ORG}\">github.com/AI-Guiders</a>",
     "Handbook и KB",
@@ -193,7 +195,7 @@ ru = page(
         (f"{ORG}/kb-public", "kb-public", "Публичный срез KB"),
         (f"{ORG}/handbook", "репозиторий handbook", "Правки в wiki/, синхрон с GitHub Wiki"),
     ],
-    [(ORG, "GitHub"), ("https://karataevdmitry.github.io/ru/", "Тексты (личный сайт)")],
+    [(ORG, "GitHub"), ("/ru/writing/", "Тексты"), ("https://karataevdmitry.github.io/ru/writing/", "Личный архив")],
     "/assets/css/site.css",
     "/ru/",
 )

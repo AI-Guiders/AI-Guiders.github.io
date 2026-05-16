@@ -11,17 +11,18 @@ Live: **https://ai-guiders.github.io/** (after Pages enable).
 |------|---------|
 | `docs/index.html` | English landing |
 | `docs/ru/index.html` | Russian landing |
-| `docs/assets/css/site.css` | Shared styles |
+| `docs/assets/css/site.css` | Landing styles |
+| `docs/assets/css/articles.css` | Writing section styles |
+| `docs/writing/`, `docs/ru/writing/` | Generated articles (from `src/writing/`) |
+| `src/writing/{en,ru}/*.md` | Markdown sources |
+| `tools/build-writing.csx` | Build writing + Atom + tag pages |
+| `tools/gen_pages.py` | Regenerate EN/RU landings |
 
-Landings are hand-maintained for now. Regenerate from `tools/gen_pages.py` if you change the card list there.
+Landings: `python tools/gen_pages.py`. Writing: `dotnet script tools/build-writing.csx` (needs [dotnet-script](https://github.com/dotnet-script/dotnet-script)).
 
 ## Related
 
 - [GitHub org profile](https://github.com/AI-Guiders) — `AI-Guiders/.github/profile/README.md`
 - [Handbook wiki](https://github.com/AI-Guiders/handbook/wiki) (RU)
-- [Personal writing site](https://karataevdmitry.github.io/) — long-form EN/RU articles
-
-## Future (optional)
-
-- Port `build-writing.csx` from [KarataevDmitry.github.io](https://github.com/KarataevDmitry/KarataevDmitry.github.io) for org essays under `src/writing/{en,ru}`.
+- [Personal writing archive](https://karataevdmitry.github.io/writing/) — long-form EN/RU essays
 

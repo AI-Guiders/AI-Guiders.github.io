@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Writing — AI-Guiders</title>
+  <link href="https://ai-guiders.github.io/writing/" rel="alternate" type="text/html" />
+  <link href="https://ai-guiders.github.io/writing/atom.xml" rel="self" type="application/atom+xml" />
+  <id>https://ai-guiders.github.io/writing/atom.xml</id>
+  <updated>2026-04-02T12:00:00Z</updated>
+  <author><name>AI-Guiders</name></author>
+  <entry>
+    <title>Writing on AI-Guiders</title>
+    <link href="https://ai-guiders.github.io/writing/welcome-writing.html" rel="alternate" type="text/html" />
+    <id>https://ai-guiders.github.io/writing/welcome-writing.html</id>
+    <updated>2026-04-02T12:00:00Z</updated>
+    <summary type="text">Org essays and release notes live here; deeper personal posts stay on the author site.</summary>
+  </entry>
+</feed>

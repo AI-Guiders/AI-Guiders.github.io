@@ -1,0 +1,360 @@
+/* Shared layout for /writing/* article pages */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0f172a;
+  --bg-card: #1e293b;
+  --text: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --accent: #2dd4bf;
+  --accent-hover: #5eead4;
+  --accent-dim: rgba(45, 212, 191, 0.12);
+  --border: #334155;
+  --radius: 12px;
+  --font: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: var(--accent);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 var(--radius) var(--radius);
+  z-index: 100;
+  font-weight: 600;
+}
+.skip-link:focus { top: 0; }
+
+a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--accent-hover); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+
+nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 1.5rem;
+}
+nav .nav-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem;
+  min-height: 56px;
+}
+nav .logo { font-weight: 700; font-size: 1.1rem; color: var(--text); }
+nav .logo a { color: inherit; text-decoration: none; }
+nav .logo a:hover { color: var(--text); }
+nav .logo span { color: var(--accent); }
+nav .nav-right { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; justify-content: flex-end; }
+nav ul { list-style: none; display: flex; gap: 1.5rem; }
+nav ul a { color: var(--text-secondary); font-size: 0.9rem; font-weight: 500; }
+nav ul a:hover { color: var(--accent); }
+nav ul.nav-lang { gap: 0.35rem; align-items: center; }
+nav ul.nav-lang a { font-size: 0.85rem; font-weight: 600; }
+nav ul.nav-lang a[aria-current="page"] { color: var(--accent); }
+nav ul.nav-lang .nav-sep { color: var(--text-muted); padding: 0 0.1rem; font-weight: 400; pointer-events: none; }
+
+@media (max-width: 640px) {
+  nav ul:not(.nav-lang) { gap: 0.8rem; }
+  nav ul:not(.nav-lang) a { font-size: 0.8rem; }
+}
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+.article-wrap {
+  padding: 2.5rem 0 4rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.article-back {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+.article-back a { font-weight: 600; }
+
+.article-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.article-header h1 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+.article-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Optional YAML-driven disclosure (see src/writing/README-provenance.md). Off by default. */
+.article-provenance {
+  margin-bottom: 1.75rem;
+}
+.article-provenance-details {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+}
+.article-provenance-summary {
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  list-style: none;
+}
+.article-provenance-summary::-webkit-details-marker { display: none; }
+.article-provenance-details[open] .article-provenance-summary {
+  margin-bottom: 0.65rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.article-provenance-dl {
+  display: grid;
+  grid-template-columns: minmax(7rem, 34%) 1fr;
+  gap: 0.35rem 1rem;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+.article-provenance-dl dt {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+.article-provenance-dl dd { min-width: 0; }
+.article-provenance-list {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+.article-provenance-multiline {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+@media (max-width: 520px) {
+  .article-provenance-dl {
+    grid-template-columns: 1fr;
+  }
+  .article-provenance-dl dt { margin-top: 0.5rem; }
+  .article-provenance-dl dt:first-child { margin-top: 0; }
+}
+
+.prose {
+  font-size: 1.02rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+.prose p { margin-bottom: 1.1rem; }
+.prose h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 2rem 0 0.75rem;
+}
+.prose ul, .prose ol {
+  margin: 0 0 1.1rem 1.25rem;
+}
+.prose li { margin-bottom: 0.4rem; }
+.prose strong { color: var(--text); font-weight: 600; }
+.prose code {
+  font-family: ui-monospace, 'Cascadia Code', Consolas, monospace;
+  font-size: 0.9em;
+  background: rgba(30, 41, 59, 0.9);
+  padding: 0.15rem 0.4rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+/* Тело статьи: ссылки заметны (глобально a { text-decoration: none }). */
+.prose a {
+  color: var(--accent);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: rgba(45, 212, 191, 0.5);
+  text-underline-offset: 0.2em;
+  transition: color 0.2s, text-decoration-color 0.2s;
+}
+.prose a:hover {
+  color: var(--accent-hover);
+  text-decoration-color: rgba(94, 234, 212, 0.75);
+}
+/* Иначе **ссылка** даёт <a><strong></strong></a> и .prose strong красит текст как обычный акцент — ссылка «пропадает». */
+.prose a strong {
+  color: inherit;
+  font-weight: 600;
+}
+
+.writing-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.writing-list li {
+  margin-bottom: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 0.2s;
+}
+.writing-list li:hover { border-color: rgba(45, 212, 191, 0.3); }
+.writing-list a.title {
+  font-size: 1.05rem;
+  font-weight: 650;
+  color: var(--text);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+.writing-list a.title:hover { color: var(--accent); }
+.writing-list .blurb {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.page-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+.page-intro {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  max-width: 560px;
+}
+
+.tags-browse {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.tag-cloud {
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  align-items: baseline;
+}
+.tag-cloud li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.tag-count {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.article-tags {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag-pill {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: var(--accent-dim);
+  border: 1px solid rgba(45, 212, 191, 0.35);
+  color: var(--accent);
+  text-decoration: none !important;
+  line-height: 1.3;
+}
+.tag-pill:hover {
+  color: var(--accent-hover);
+  border-color: rgba(94, 234, 212, 0.45);
+}
+.tag-pill--sm {
+  font-size: 0.72rem;
+  padding: 0.12rem 0.45rem;
+  font-weight: 600;
+}
+
+.writing-item-tags {
+  margin: 0.35rem 0 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.solutions-menu {
+  margin: 0.4rem 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.8rem;
+  font-size: 0.86rem;
+}
+.solutions-menu a {
+  color: var(--text-secondary);
+  border-bottom: 1px dashed rgba(148, 163, 184, 0.35);
+}
+.solutions-menu a:hover,
+.solutions-menu a[aria-current="page"] {
+  color: var(--accent);
+  border-bottom-color: rgba(45, 212, 191, 0.55);
+}
+
+.tags-index-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.tags-index-list li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.tags-index-list a {
+  font-weight: 600;
+}
+.tags-index-count {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-left: 0.35rem;
+}
+
+footer {
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+.contact-links {
+  display: flex; justify-content: center; gap: 2rem;
+  margin-bottom: 1rem; flex-wrap: wrap;
+}
+.contact-links a { font-weight: 500; font-size: 0.95rem; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
