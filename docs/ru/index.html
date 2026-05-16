@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI-Guiders — open stack для agent-first .NET</title>
+  <meta name="description" content="Открытые инструменты для agent-first .NET: Cascade IDE, MCP, общие библиотеки." />
+  <link rel="alternate" hreflang="en" href="/" />
+  <link rel="alternate" hreflang="ru" href="/ru/" />
+  <link rel="alternate" hreflang="x-default" href="/" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F916;</text></svg>" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">К содержанию</a>
+  <nav aria-label="Основная навигация">
+    <div class="nav-inner">
+      <div class="logo"><a href="/ru/">AI<span>-</span>Guiders</a></div>
+      <div class="nav-right">
+        <ul>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#stack">Open stack</a></li>
+          <li><a href="#handbook">Handbook</a></li>
+          <li><a href="https://github.com/AI-Guiders">GitHub</a></li>
+        </ul>
+        <ul class="nav-lang" aria-label="Язык">
+          <li><a href="/" lang="en" >EN</a></li>
+          <li class="nav-sep" aria-hidden="true">|</li>
+          <li><a href="/ru/" lang="ru" aria-current="page">RU</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-label">Open source · .NET · MCP</div>
+          <h1>Инструменты для агентов<br /><span class="accent">которым можно доверять</span></h1>
+          <p class="lead">IDE, MCP-серверы и общие библиотеки — чтобы человек и coding agent смотрели на одну правду: сборка, тесты, git, Roslyn, память агента.</p>
+          <div class="hero-buttons">
+            <a href="https://github.com/AI-Guiders" class="btn btn-primary">GitHub org</a>
+            <a href="#stack" class="btn btn-outline">Open stack</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">Что делаем</h2>
+        <p class="section-subtitle"><strong>Паритет</strong> — если агент делает через MCP, IDE не должна противоречить. <strong>Наблюдаемый контур</strong> — редактор, инструменты и агент в одной картине. Тексты — на <a href="https://karataevdmitry.github.io/ru/">сайте Дмитрия Каратаева</a>; здесь — хаб организации.</p>
+      </div>
+    </section>
+    <section id="stack">
+      <div class="container">
+        <h2 class="section-title">Open stack</h2>
+        <p class="section-subtitle">Полный список: <a href="https://github.com/AI-Guiders">github.com/AI-Guiders</a></p>
+        <div class="card-grid">
+          <div class="project-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">🚀</div>
+              <h3><a href="https://github.com/AI-Guiders/cascade-ide">cascade-ide</a></h3>
+            </div>
+            <p class="desc">IDE на C#, in-proc MCP, модель внимания кокпита. MIT.</p>
+            <div class="tags"><span class="tag">IDE</span><span class="tag">Агенты</span></div>
+          </div>
+          <div class="project-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">📝</div>
+              <h3><a href="https://github.com/AI-Guiders/agent-notes-mcp">agent-notes-mcp</a></h3>
+            </div>
+            <p class="desc">MCP памяти 2.0, один TOML. В паре с <a href="https://github.com/AI-Guiders/kb-public">kb-public</a>.</p>
+            <div class="tags"><span class="tag">MCP</span><span class="tag">Память</span></div>
+          </div>
+          <div class="project-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">📖</div>
+              <h3><a href="https://github.com/AI-Guiders/kb-public">kb-public</a></h3>
+            </div>
+            <p class="desc">Публичный срез KB для агентов (CC BY-SA).</p>
+            <div class="tags"><span class="tag">Knowledge</span><span class="tag">CC BY-SA</span></div>
+          </div>
+          <div class="project-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">🔍</div>
+              <h3><a href="https://github.com/AI-Guiders/RoslynMcp">RoslynMcp</a></h3>
+            </div>
+            <p class="desc">Диагностики Roslyn, code actions, rename.</p>
+            <div class="tags"><span class="tag">C#</span><span class="tag">Roslyn</span></div>
+          </div>
+          <div class="project-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">🔧</div>
+              <h3><a href="https://github.com/AI-Guiders/dotnet-debug-mcp">dotnet-debug-mcp</a></h3>
+            </div>
+            <p class="desc">Отладка DAP для агентов.</p>
+            <div class="tags"><span class="tag">MCP</span><span class="tag">Debug</span></div>
+          </div>
+          <div class="project-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">📚</div>
+              <h3><a href="https://github.com/AI-Guiders/agent-first-learn">agent-first-learn</a></h3>
+            </div>
+            <p class="desc">Курс: проектирование с агентами и для агентов. MIT.</p>
+            <div class="tags"><span class="tag">Курс</span><span class="tag">Агенты</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="handbook">
+      <div class="container">
+        <h2 class="section-title">Handbook и KB</h2>
+        <p class="section-subtitle">Нормы организации и знания для агентов.</p>
+        <ul class="link-list">
+          <li><a href="https://github.com/AI-Guiders/handbook/wiki">Handbook wiki</a><span class="meta">Миссия, ценности, границы (RU)</span></li>
+          <li><a href="https://github.com/AI-Guiders/kb-public">kb-public</a><span class="meta">Публичный срез KB</span></li>
+          <li><a href="https://github.com/AI-Guiders/handbook">репозиторий handbook</a><span class="meta">Правки в wiki/, синхрон с GitHub Wiki</span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="links">
+      <a href="https://github.com/AI-Guiders">GitHub</a>
+      <a href="https://karataevdmitry.github.io/ru/">Тексты (личный сайт)</a>
+    </div>
+    <p>AI-Guiders &copy; 2026</p>
+  </footer>
+</body>
+</html>
