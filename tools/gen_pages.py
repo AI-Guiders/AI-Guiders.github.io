@@ -3,9 +3,10 @@ from pathlib import Path
 
 CSS = "/assets/css/site.css"
 ORG = "https://github.com/AI-Guiders"
+DOCS_CIDE = "https://ai-guiders.github.io/cascade-ide/"
 
 CARDS_EN = [
-    ("🚀", "cascade-ide", "C#-first IDE, in-proc MCP, cockpit attention model. MIT.", ["IDE", "Agents"]),
+    ("🚀", "cascade-ide", f'C#-first IDE, in-proc MCP, cockpit attention model. <a href="{DOCS_CIDE}">Docs</a>. MIT.', ["IDE", "Agents"]),
     ("📝", "agent-notes-mcp", "Memory MCP 2.0, one TOML config. With kb-public.", ["MCP", "Memory"]),
     ("📖", "kb-public", "Public KB slice for agents (CC BY-SA).", ["Knowledge", "CC BY-SA"]),
     ("🔍", "RoslynMcp", "Roslyn diagnostics, code actions, rename.", ["C#", "Roslyn"]),
@@ -14,7 +15,7 @@ CARDS_EN = [
 ]
 
 CARDS_RU = [
-    ("🚀", "cascade-ide", "IDE на C#, in-proc MCP, модель внимания кокпита. MIT.", ["IDE", "Агенты"]),
+    ("🚀", "cascade-ide", f'IDE на C#, in-proc MCP, модель внимания кокпита. <a href="{DOCS_CIDE}">Документация</a>. MIT.', ["IDE", "Агенты"]),
     ("📝", "agent-notes-mcp", "MCP памяти 2.0, один TOML. В паре с kb-public.", ["MCP", "Память"]),
     ("📖", "kb-public", "Публичный срез KB для агентов (CC BY-SA).", ["Knowledge", "CC BY-SA"]),
     ("🔍", "RoslynMcp", "Диагностики Roslyn, code actions, rename.", ["C#", "Roslyn"]),
@@ -147,7 +148,7 @@ en = page(
     "en",
     "AI-Guiders — Agent-first open stack for .NET",
     "Open tools for agent-first .NET work: Cascade IDE, MCP servers, shared libraries.",
-    [("#about", "About"), ("#stack", "Open stack"), ("/writing/", "Writing"), ("#handbook", "Handbook"), (ORG, "GitHub")],
+    [("#about", "About"), ("#stack", "Open stack"), (DOCS_CIDE, "CIDE docs"), ("/writing/", "Writing"), ("#handbook", "Handbook"), (ORG, "GitHub")],
     "Open source · .NET · MCP",
     "Agent-first tools",
     "you can verify",
@@ -159,7 +160,7 @@ en = page(
     "Org essays in <a href=\"/writing/\">Writing</a>; longer personal archive on "
     "<a href=\"https://karataevdmitry.github.io/writing/\">Dmitry Karataev's site</a>.",
     "Open stack",
-    f"Full list: <a href=\"{ORG}\">github.com/AI-Guiders</a>",
+    f"Full list: <a href=\"{ORG}\">github.com/AI-Guiders</a> · <a href=\"{DOCS_CIDE}\">Cascade IDE documentation</a> (ADR by status, RU/EN)",
     "Handbook & KB",
     "Org norms and agent knowledge.",
     [
@@ -175,7 +176,7 @@ ru = page(
     "ru",
     "AI-Guiders — open stack для agent-first .NET",
     "Открытые инструменты для agent-first .NET: Cascade IDE, MCP, общие библиотеки.",
-    [("#about", "О нас"), ("#stack", "Open stack"), ("/ru/writing/", "Тексты"), ("#handbook", "Handbook"), (ORG, "GitHub")],
+    [("#about", "О нас"), ("#stack", "Open stack"), (DOCS_CIDE, "Доки CIDE"), ("/ru/writing/", "Тексты"), ("#handbook", "Handbook"), (ORG, "GitHub")],
     "Open source · .NET · MCP",
     "Инструменты для агентов",
     "которым можно доверять",
@@ -187,7 +188,7 @@ ru = page(
     "Орг-тексты — в разделе <a href=\"/ru/writing/\">Тексты</a>; личный архив — на "
     "<a href=\"https://karataevdmitry.github.io/ru/writing/\">сайте Дмитрия Каратаева</a>.",
     "Open stack",
-    f"Полный список: <a href=\"{ORG}\">github.com/AI-Guiders</a>",
+    f"Полный список: <a href=\"{ORG}\">github.com/AI-Guiders</a> · <a href=\"{DOCS_CIDE}\">документация Cascade IDE</a> (ADR по статусам, RU/EN)",
     "Handbook и KB",
     "Нормы организации и знания для агентов.",
     [
